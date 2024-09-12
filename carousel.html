@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <!-- jQuery (necesario para Owl Carousel) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <style>
+        .carousel-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .carousel-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+
+    <title>AppStorely</title>
+</head>
+
+<body>
+
+    <center>
+        <div class="owl-carousel">
+            <div>
+                <img src="img/Agrega-tu-App.png" alt="Agrega tu App">
+                <a href="https://forms.gle/Pz99JN3FH5XsKmgt9" class="carousel-button">Agregar App</a>
+            </div>
+            <div>
+                <img src="img/Anunciate-Aqui.png" alt="Anunciate Aqui">
+                <a href="#" class="carousel-button">Anunciarte</a>
+            </div>
+            <div>
+                <img src="img/Donar-con-KoFi.png" alt="Donar con KoFi">
+                <a href="https://ko-fi.com/ledesmitadj" class="carousel-button">Donar</a>
+            </div>
+        </div>
+    </center>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                autoplay: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
