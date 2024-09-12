@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet"
@@ -18,6 +18,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <style>
+        .owl-carousel img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Estilo para los botones debajo de las imágenes */
         .carousel-button {
             display: inline-block;
             margin-top: 10px;
@@ -34,7 +41,41 @@
         .carousel-button:hover {
             background-color: #0056b3;
         }
+
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 600px) {
+            .owl-carousel .carousel-button {
+                font-size: 12px;
+                /* Reduce el tamaño de los botones en móviles */
+                padding: 8px 15px;
+                /* Ajusta el padding en móviles */
+            }
+
+            .owl-carousel img {
+                max-width: 100%;
+                /* Asegura que las imágenes no se desborden */
+                height: auto;
+                /* Mantiene la proporción de la imagen */
+            }
+        }
+
+        /* Estilos para tablets */
+        @media (min-width: 600px) and (max-width: 1000px) {
+            .owl-carousel .carousel-button {
+                font-size: 14px;
+                padding: 10px 18px;
+            }
+        }
+
+        /* Estilos para pantallas grandes */
+        @media (min-width: 1000px) {
+            .owl-carousel .carousel-button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
     </style>
+
 
 
     <title>AppStorely</title>
@@ -46,15 +87,15 @@
         <div class="owl-carousel">
             <div>
                 <img src="img/Agrega-tu-App.png" alt="Agrega tu App">
-                <a href="https://forms.gle/Pz99JN3FH5XsKmgt9" class="carousel-button">Agregar App</a>
+                <a href="https://forms.gle/Pz99JN3FH5XsKmgt9" target="_blank" class="carousel-button">Agregar App</a>
             </div>
             <div>
                 <img src="img/Anunciate-Aqui.png" alt="Anunciate Aqui">
-                <a href="#" class="carousel-button">Anunciarte</a>
+                <a href="#" target="_blank" class="carousel-button">Anunciarte</a>
             </div>
             <div>
                 <img src="img/Donar-con-KoFi.png" alt="Donar con KoFi">
-                <a href="https://ko-fi.com/ledesmitadj" class="carousel-button">Donar</a>
+                <a href="https://ko-fi.com/ledesmitadj" target="_blank" class="carousel-button">Donar</a>
             </div>
         </div>
     </center>
@@ -69,13 +110,13 @@
                 autoplay: true,
                 responsive: {
                     0: {
-                        items: 1
+                        items: 2 // Mostrará 1 ítem en pantallas pequeñas (móviles)
                     },
                     600: {
-                        items: 3
+                        items: 3 // Mostrará 2 ítems en pantallas medianas (tablets)
                     },
                     1000: {
-                        items: 5
+                        items: 6 // Mostrará 4 ítems en pantallas grandes (escritorio)
                     }
                 }
             });
